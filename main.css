@@ -1,5 +1,11 @@
 body {
   background: #000000 url('img/background.jpeg') repeat top left;
+  cursor: url('img/cursor.png'), auto;
+}
+
+button:hover,
+a:hover {
+  cursor: url('img/cursor-pointer.png'), pointer;
 }
 
 body::-webkit-scrollbar {
@@ -14,6 +20,17 @@ body::-webkit-scrollbar-thumb {
   background-color: #b3b3b3;
   border: 1px solid #000000;
   /* the actual draggable element, the star of the show! */
+}
+
+.button--unstyled {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  outline: inherit;
+  padding: 0;
+  text-align: left;
 }
 
 .container {
@@ -41,6 +58,10 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+}
+
+.header-logo {
+  margin: 0;
 }
 
 .columns {
@@ -107,11 +128,11 @@ img {
   height: auto;
 }
 
-blink {
-  animation: 1s linear infinite emo-blink-effect;
+.blink {
+  animation: 1s linear infinite blink-effect;
 }
 
-@keyframes emo-blink-effect {
+@keyframes blink-effect {
   0% {
     visibility: hidden;
   }
